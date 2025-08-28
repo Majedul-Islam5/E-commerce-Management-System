@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if (isset($_SESSION['signup_error'])) 
+    {
+        echo "<p style='color: red;'>Empty Field exist</p>";
+        unset($_SESSION['signup_error']);
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +31,8 @@
     <hr>
     </div>
 <img src="Image/LOGINSIGNUP.jpg" alt="signup" >
-<form method="GET">
 
-
-
-    
-
-
+<form action="signupValidation.php" method="POST" onsubmit="return validation()">
 
         <div class="container">
             <h1>Sign Up</h1>
@@ -36,36 +41,53 @@
 
         <div class="container">
             
-            <input type="text" id="name" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="text" id="name" name="userName" autocomplete="off" placeholder=" " class="form_input" >
             <label for="name"> <strong>Name</strong></label>
+            <span id="nameerr"></span>
         </div>
+        
 
 
         <div class="container">
             
-            <input type="email" id="email" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="email" id="email" name="email" autocomplete="off" placeholder=" " class="form_input" >
             <label for="email"> <strong>Email</strong></label>
+            <span id="emailerr"></span>
+        </div>
+
+        <div class="container">
+            <select id="userType" name="userType" class="form_input">
+                <option value="" disabled selected>Select a type</option>
+                <option value="Customer">Customer</option>
+                <option value="DeliveryMan">DeliveryMan</option>
+            </select>
+            <label for="userType"><strong>User Type</strong></label>
+            <span id="typeerr"></span>
+        </div>
+
+
+        <div class="container">
+            
+            <input type="number" id="mobile" name="mobile" autocomplete="off" placeholder=" " class="form_input" >
+            <label for="number"> <strong>Mobile</strong></label>
+            <span id="mobileerr"></span>
         </div>
 
         <div class="container">
             
-            <input type="text" id="number" autocomplete="off" placeholder=" " class="form_input" required>
-            <label for="text"> <strong>Mobile</strong></label>
-        </div>
-
-        <div class="container">
-            
-            <input type="text" id="address" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="text" id="address" name="address"  autocomplete="off" placeholder=" " class="form_input">
             <label for="address"> <strong>Address</strong></label>
+            <span id="addresserr"></span>
         </div>
 
         <div class="container">
-            <input type="password" id="password" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="password" id="password" name="password" autocomplete="off" placeholder=" " class="form_input" >
             <label for="password"><strong>Password</strong></label>
+            <span id="passworderr"></span>
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn">Sigh Up</button>
+            <button type="submit" class="btn">Sign Up</button>
         </div>
 
 
@@ -81,5 +103,6 @@
         <hr>
         <p>Copyright &copy; All rights reserved by ALIDADA</p>
     </footer>
+    <script src="JS/signupValidation.js"></script>
 </body>
 </html>

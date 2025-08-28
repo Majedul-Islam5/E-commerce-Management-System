@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if (isset($_SESSION['login_error'])) 
+    {
+        echo "<p style='color: red;'>Empty Field exist</p>";
+        unset($_SESSION['login_error']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,12 +30,7 @@
     <hr>
     </div>
 <img src="Image/LOGINSIGNUP.jpg" alt="signup" >
-<form method="GET">
-
-
-
-    
-
+<form action="loginValidation.php"  method="POST" onsubmit="return validation()">
 
 
         <div class="container">
@@ -36,14 +40,16 @@
 
         <div class="container">
             
-            <input type="text" id="name" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="text" id="name" name="userName" autocomplete="off" placeholder=" " class="form_input">
             <label for="name"> <strong>Name</strong></label>
+            <span id="nameerr"></span>
         </div>
 
 
         <div class="container">
-            <input type="password" id="password" autocomplete="off" placeholder=" " class="form_input" required>
+            <input type="password" id="password" name="password" autocomplete="off" placeholder=" " class="form_input">
             <label for="password"><strong>Password</strong></label>
+            <span id="passworderr"></span>
         </div>
 
         <div class="form-group">
@@ -63,5 +69,6 @@
         <hr>
         <p>Copyright &copy; All rights reserved by ALIDADA</p>
     </footer>
+    <script src="JS/loginValidation.js"></script>
 </body>
 </html>

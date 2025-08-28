@@ -2,6 +2,14 @@ body{
     background-color: white;
 }
 
+span{
+    position: absolute;
+    top: 3em; 
+    left: 0; 
+    color: red; 
+    font-size: 0.85em;
+}
+
  img {
                 width: 900px;
                 height: 555px;
