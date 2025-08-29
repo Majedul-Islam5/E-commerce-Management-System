@@ -4,9 +4,12 @@
     $db_pass="";
     $db_name="e_commerce_management_system";
     $conn="";
-    
-    $conn= new mysqli($db_server,$db_user,$db_pass,$db_name);
-    if($conn->connect_error){
-        die("Error Occured".$conn->connect_error);
+
+    try{
+        $conn=mysqli_connect($db_server,$db_user,$db_pass,$db_name);
+    }
+    catch(mysqli_sql_exception)
+    {
+        echo "<script>alert('mysql not not started in xampp');</script>";
     }
 ?>

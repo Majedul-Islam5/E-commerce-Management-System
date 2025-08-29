@@ -20,12 +20,14 @@ function validation()
 
 }
 
-document.getElementById('name').addEventListener("keypress", function(e) 
+document.getElementById('name').addEventListener("keypress",function(e) 
 {
     document.getElementById("nameerr").innerHTML = "";
+    document.getElementById("use").innerHTML = "";
 });
 
-document.getElementById('password').addEventListener("keypress", function(e) 
+document.getElementById('password').addEventListener("keypress",function(e) 
 {
-    document.getElementById("passworderr").innerHTML = "";
+    document.getElementById("passworderr").innerHTML="";
+    document.getElementById("pass").innerHTML = "";
 });

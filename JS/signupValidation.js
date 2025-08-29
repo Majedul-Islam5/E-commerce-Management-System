@@ -6,12 +6,13 @@ function validation()
     const mobile=document.getElementById('mobile').value;
     const address=document.getElementById('address').value.trim();
     const password=document.getElementById('password').value;
-    const userType=document.getElementById('userType').innerHTML = "";
+    const userType=document.getElementById('userType').value;
 
     const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if(firstname=="")
     {
+        console.log("Validation function called");
         document.getElementById("nameerr").innerHTML="Name is empty";
         return false;    
     }
@@ -22,15 +23,21 @@ function validation()
             return false; 
     }
 
-    if (userType=="") {
-        document.getElementById("typeerr").innerHTML="Please select a user type";
-        isValid = false;
-    }
-
     if(email=="")
     {
         document.getElementById("emailerr").innerHTML="Email is empty";
         return false;    
+    }
+
+    if (!emailRegex.test(email)) 
+    {
+        document.getElementById("emailerr").innerHTML="Enter a valid email address.";
+        return false;
+    }
+
+    if (userType=="") {
+        document.getElementById("typeerr").innerHTML="Please select a user type";
+        return false;
     }
 
     if(mobile=="")
@@ -87,11 +94,7 @@ function validation()
         return false;
     }
 
-    if (!emailRegex.test(email)) 
-    {
-        document.getElementById("error").innerHTML="Enter a valid email address.";
-        return false;
-    }
+    
 
 
     return true;

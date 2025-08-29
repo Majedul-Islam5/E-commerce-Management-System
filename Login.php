@@ -43,6 +43,16 @@
             <input type="text" id="name" name="userName" autocomplete="off" placeholder=" " class="form_input">
             <label for="name"> <strong>Name</strong></label>
             <span id="nameerr"></span>
+            <span id="use">
+                <?php
+                    if (isset($_SESSION['nameError'])) 
+                    {
+                        echo $_SESSION['nameError'];
+
+                        unset($_SESSION['nameError']);
+                    }
+                ?>
+            </span>
         </div>
 
 
@@ -50,6 +60,16 @@
             <input type="password" id="password" name="password" autocomplete="off" placeholder=" " class="form_input">
             <label for="password"><strong>Password</strong></label>
             <span id="passworderr"></span>
+            <span id="pass">
+                <?php
+                    if (isset($_SESSION['passError'])) 
+                    {
+                        echo $_SESSION['passError'];
+
+                        unset($_SESSION['passError']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="form-group">
