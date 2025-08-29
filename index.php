@@ -56,10 +56,10 @@
         </div>
 
         <div class="container">
-            <select id="userType" name="userType" class="form_input">
-                <option value="" disabled selected>Select a type</option>
+            <select id="userType" name="userType" class="form_input" style="width:338px; height: 45px;">
+                <option value="" disabled selected>Select a Type</option>
                 <option value="Customer">Customer</option>
-                <option value="DeliveryMan">DeliveryMan</option>
+                <option value="DeliveryMan">Delivery Man</option>
             </select>
             <label for="userType"><strong>User Type</strong></label>
             <span id="typeerr"></span>

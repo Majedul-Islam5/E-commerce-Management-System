@@ -41,10 +41,10 @@ html, body {
 }
 
 hr{
-    margin: 0;  /* remove extra space */
+    margin: 0;  
     border: none;
     height: 2px;
-    background-color: gray; /* or any color */
+    background-color: gray; 
 }
 
 .btn {
@@ -150,7 +150,7 @@ label {
     transition: top 350ms ease-in, font-size 350ms ease-in;
 }
 
-/* Floating label effect */
+
 .form_input:focus + label,
 .form_input:not(:placeholder-shown) + label {
     top: -0.5em;
