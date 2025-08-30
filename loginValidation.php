@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    include_once 'Database/data.php';
+    include_once ('Database/data.php');
 
     $firstname=isset($_POST['userName']) ? trim(htmlspecialchars($_POST['userName'])) : '';
     $password=isset($_POST['password']) ? trim(htmlspecialchars($_POST['password'])) : '';
@@ -42,8 +42,22 @@
         }
         else
         {
-            $_SESSION['userName']=$firstname;
-            header("Location: Customer/cusDashboard.php");
+            $_SESSION['userId']=$row[0]['user_id'];
+            if($row[0]['type']=="Customer")
+            {
+                header("Location: Customer/cusDashboard.php");
+            }
+
+            if($row[0]['type']=="Admin")
+            {
+                header("Location: Admin/adDashboard.php");
+            }
+
+            if($row[0]['type']=="DeliveryMan")
+            {
+                header("Location: DeliveryMan/deliDashboard.php");
+            }
+            
         }
 
 }

@@ -14,6 +14,33 @@ hr{
     background-color: gray; 
 }
 
+div#view{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-left:70px;
+    margin-top: 70px;
+}
+
+div.product{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+.product a {
+    display: block;         
+    width: fit-content;
+    margin: 10px auto;      
+}
+
+
+.product img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+}
+
 
 
 .main-content {

@@ -27,10 +27,22 @@ if (!empty($errors))
 }
 else
 {
+    $result=$conn->query("select * from user_info where user_name='$firstname'"); 
+    $row=$result->fetch_all(MYSQLI_ASSOC);
+        if($row[0]['user_name']==$firstname)
+        {
+            $_SESSION['userExist']="User exist";
+            header("Location: index.php");
+            exit();
+        }
+        else
+        {
+            $stmt = $conn->prepare("INSERT INTO user_info (user_name,password,type,address,email,nid ) VALUES (?,?,?,?,?,?)");
+            $stmt->bind_param("ssssss", $firstname, $password, $userType,$address,$email,$mobile);
+            $stmt->execute();
 
-    $stmt = $conn->prepare("INSERT INTO user_info (user_name,password,type,address,email,nid ) VALUES (?,?,?,?,?,?)");
-    $stmt->bind_param("ssssss", $firstname, $password, $userType,$address,$email,$mobile);
-    $stmt->execute();
+            header("Location: Login.php");
+        }
 
-    header("Location: Login.php");
+    
 }

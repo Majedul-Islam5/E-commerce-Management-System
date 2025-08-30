@@ -112,6 +112,7 @@ document.getElementById('mobile').addEventListener("keypress", function(e)
 document.getElementById('name').addEventListener("keypress", function(e) 
 {
     document.getElementById("nameerr").innerHTML="";
+    document.getElementById("userex").innerHTML = "";
 });
 
 document.getElementById('email').addEventListener("keypress", function(e) 

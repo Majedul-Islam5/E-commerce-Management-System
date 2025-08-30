@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
 
     include_once ('../Database/data.php');
@@ -9,13 +9,23 @@
         exit();
     }
 
-    $result = $conn->query("select * from product");
-    $result=$result->fetch_all(MYSQLI_ASSOC);
+    $userId=$_SESSION['userId'];
+
+    $result=$conn->query("select * from customer_order where user_id=$userId"); 
+    $row=$result->fetch_all(MYSQLI_ASSOC);
+    if(count($row)==0)
+    {
+        echo "No data to display";
+    }
+    else
+    {
+                
+        //yet to show the products that i have selected;
+        
+    } 
 ?>
 
-
-
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,23 +55,6 @@
     </header>
 
     <hr>
-
-    <div id="view">
-        
-        <?php
-            foreach($result as $row):
-                
-        ?>
-        <div class="product">
-            <img src="../Image/<?php echo $row['image_url']?>" alt="notfound"><br>
-            <span><?php echo $row['p_name']?></span><br>
-            <span><?php echo $row['price']?></span><br>
-            <a href="holdCart.php?p_id=<?php echo $row['p_id']?>">
-                <button type="button" id="<?php echo $row['p_id']?>">Add to Cart</button>
-            </a>
-        </div>
-        <?php endforeach;?>       
-    </div>
     
 
 
@@ -72,3 +65,5 @@
     </footer>
 </body>
 </html>
+
+-->

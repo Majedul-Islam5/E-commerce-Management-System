@@ -44,9 +44,17 @@
             <input type="text" id="name" name="userName" autocomplete="off" placeholder=" " class="form_input" >
             <label for="name"> <strong>Name</strong></label>
             <span id="nameerr"></span>
-        </div>
-        
+            <span id="userex">
+                <?php
+                    if (isset($_SESSION['userExist'])) 
+                    {
+                        echo $_SESSION['userExist'];
 
+                        unset($_SESSION['userExist']);
+                    }
+                ?>
+            </span>
+        </div>
 
         <div class="container">
             
