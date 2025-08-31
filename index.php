@@ -1,10 +1,10 @@
 <?php
     session_start();
-    if (isset($_SESSION['signup_error'])) 
+    /*if (isset($_SESSION['signup_error'])) 
     {
         echo "<p style='color: red;'>Empty Field exist</p>";
         unset($_SESSION['signup_error']);
-    }
+    }*/
 ?>
 
 
@@ -54,6 +54,16 @@
                     }
                 ?>
             </span>
+
+            <span id="naerr">
+                <?php
+                    if (isset($_SESSION['Name'])) 
+                    {
+                        echo $_SESSION['Name'];
+                        unset($_SESSION['Name']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="container">
@@ -61,6 +71,16 @@
             <input type="email" id="email" name="email" autocomplete="off" placeholder=" " class="form_input" >
             <label for="email"> <strong>Email</strong></label>
             <span id="emailerr"></span>
+
+            <span id="emerr">
+                <?php
+                    if (isset($_SESSION['Email'])) 
+                    {
+                        echo $_SESSION['Email'];
+                        unset($_SESSION['Email']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="container">
@@ -71,6 +91,15 @@
             </select>
             <label for="userType"><strong>User Type</strong></label>
             <span id="typeerr"></span>
+
+            <span id="usertypeerr">
+                <?php
+                    if (isset($_SESSION['UserType'])) {
+                        echo $_SESSION['UserType'];
+                        unset($_SESSION['UserType']);
+                    }
+                ?>
+            </span>
         </div>
 
 
@@ -79,6 +108,14 @@
             <input type="number" id="mobile" name="mobile" autocomplete="off" placeholder=" " class="form_input" >
             <label for="number"> <strong>Mobile</strong></label>
             <span id="mobileerr"></span>
+            <span id="moberr">
+                <?php
+                    if (isset($_SESSION['Mobile'])) {
+                        echo $_SESSION['Mobile'];
+                        unset($_SESSION['Mobile']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="container">
@@ -86,12 +123,29 @@
             <input type="text" id="address" name="address"  autocomplete="off" placeholder=" " class="form_input">
             <label for="address"> <strong>Address</strong></label>
             <span id="addresserr"></span>
+            <span id="adderr">
+                <?php
+                    if (isset($_SESSION['Address'])) {
+                        echo $_SESSION['Address'];
+                        unset($_SESSION['Address']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="container">
             <input type="password" id="password" name="password" autocomplete="off" placeholder=" " class="form_input" >
             <label for="password"><strong>Password</strong></label>
             <span id="passworderr"></span>
+
+            <span id="passerr">
+                <?php
+                    if (isset($_SESSION['Password'])) {
+                        echo $_SESSION['Password'];
+                        unset($_SESSION['Password']);
+                    }
+                ?>
+            </span>
         </div>
 
         <div class="form-group">
@@ -111,6 +165,6 @@
         <hr>
         <p>Copyright &copy; All rights reserved by ALIDADA</p>
     </footer>
-    <script src="JS/signupValidation.js"></script>
+    <!--<script src="JS/signupValidation.js"></script>-->
 </body>
 </html>

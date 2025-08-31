@@ -1,10 +1,10 @@
 <?php
     session_start();
-    if (isset($_SESSION['login_error'])) 
+    /*if (isset($_SESSION['login_error'])) 
     {
         echo "<p style='color: red;'>Empty Field exist</p>";
         unset($_SESSION['login_error']);
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +53,16 @@
                     }
                 ?>
             </span>
+            <span id="uk">
+                <?php
+                    if (isset($_SESSION['Name'])) 
+                    {
+                        echo $_SESSION['Name'];
+
+                        unset($_SESSION['Name']);
+                    }
+                ?>
+            </span>
         </div>
 
 
@@ -67,6 +77,16 @@
                         echo $_SESSION['passError'];
 
                         unset($_SESSION['passError']);
+                    }
+                ?>
+            </span>
+            <span id="pk">
+                <?php
+                    if (isset($_SESSION['Password'])) 
+                    {
+                        echo $_SESSION['Password'];
+
+                        unset($_SESSION['Password']);
                     }
                 ?>
             </span>
