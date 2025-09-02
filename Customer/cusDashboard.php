@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/cusDashboard.css">
+    
 </head>
 <body>
     <div class="main-content">
@@ -57,7 +58,7 @@
             <span><?php echo $row['p_name']?></span><br>
             <span><?php echo $row['price']?></span><br>
             <a href="holdCart.php?p_id=<?php echo $row['p_id']?>">
-                <button type="button" id="<?php echo $row['p_id']?>">Add to Cart</button>
+                <button type="button" class="button" id="<?php echo $row['p_id']?>">Add to Cart</button>
             </a>
         </div>
         <?php endforeach;?>       

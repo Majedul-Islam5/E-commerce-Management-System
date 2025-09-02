@@ -1,5 +1,5 @@
-body{
-    background-color: white;
+body {
+    background-color: #fff2cc !important;
 }
 
 html, body {
@@ -19,7 +19,8 @@ div#view{
     flex-wrap: wrap;
     gap: 60px;
     margin-left:70px;
-    margin-top: 70px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 div.product{
@@ -35,12 +36,41 @@ div.product{
 }
 
 
-.product img{
-    width:150px;
-    height:150px;
-    object-fit:cover;
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.5s ease;   
+    cursor: pointer;            
 }
 
+.product img:hover {
+    transform: scale(1.08);     
+}
+
+.button {
+    padding: 0.5em 1.5em;          
+    background-color: #9ff3f3;
+    color: #121212;                
+    border: none;
+    border-radius: 1em;            
+    font-size: 0.9em;               
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #30e3f3;     
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
 
 .main-content {
