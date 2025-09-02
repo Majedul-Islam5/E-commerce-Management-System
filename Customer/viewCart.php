@@ -25,45 +25,31 @@
     } 
 ?>
 
-<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/cusDashboard.css">
+    <title>Customer Profile</title>
+    <link rel="stylesheet" href="../CSS/viewCart.css">
 </head>
 <body>
     <div class="main-content">
-    <header>
-        <h2>ALIDADA</h2>
+        <header>
+            <h2>ALIDADA</h2>
+            <nav>
+                <a href="cusDashboard.php">Home</a>
+                <a href="cusProfile.php">Profile</a>
+                <a href="logout.php">Log Out</a>
+            </nav>
+        </header>
 
-        
-        <nav>
-            
-            <a href="cusDashboard.php">Home</a>
-            <a href="viewCart.php">Add To Cart</a>
-            <a href="cusProfile.php">Profile</a>
-            <form class="search-form" action="search.php" method="get">
-            <input type="text" name="query" placeholder="Search..." required>
-            <button type="submit">Search</button>
-        </form>
-        </nav>
-
-   
-    </header>
-
-    <hr>
-    
-
-
-    <footer>
-        
         <hr>
-        <p>Copyright &copy; All rights reserved by ALIDADA</p>
-    </footer>
+        
+        <footer>
+            <hr>
+            <p>Copyright &copy; All rights reserved by ALIDADA</p>
+        </footer>
+    </div>
 </body>
 </html>
-
--->

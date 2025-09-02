@@ -1,10 +1,13 @@
 <?php 
 session_start();
 
-if(!isset($_SESSION['userId'])) {
-    header("Location: ../Login.php");
-    exit();
-}
+    include_once ('../Database/data.php');
+
+    if(!isset($_SESSION['userId'])) 
+    {
+        header("Location: ../Login.php");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +23,13 @@ if(!isset($_SESSION['userId'])) {
             <h2>ALIDADA</h2>
             <nav>
                 <a href="cusDashboard.php">Home</a>
+                <a href="viewCart.php">Add to Cart</a>
                 <a href="logout.php">Log Out</a>
             </nav>
         </header>
 
         <hr>
-        
+
         <footer>
             <hr>
             <p>Copyright &copy; All rights reserved by ALIDADA</p>
