@@ -1,5 +1,5 @@
 body {
-    background-color: #fff2cc !important;
+    background-color: #e3e6e6 !important;
 }
 
 html, body {
@@ -17,16 +17,27 @@ hr{
 div#view{
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 25px;      
     margin-left:70px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 
 div.product{
     display: inline-block;
-    width: 150px;
+    width: 160px;
+    padding: 10px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; 
+}
+
+div.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
 }
 
 .product a {
