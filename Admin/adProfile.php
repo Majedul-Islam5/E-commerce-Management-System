@@ -50,7 +50,7 @@ session_start();
 
         <hr>
 
-       <h2>Customer/Edit Profile</h2>
+       <h2>Admin/Edit Profile</h2>
         <form action="adVerifyEdit.php" method="POST">
 
             <label for="name"> <strong>Name</strong></label><br>
