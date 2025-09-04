@@ -50,7 +50,7 @@ session_start();
 
         <hr>
 
-        <h2>Edit Your Profile</h2>
+       <h2>Customer/Edit Profile</h2>
         <form action="cusVerifyEdit.php" method="POST">
 
             <label for="name"> <strong>Name</strong></label><br>
@@ -77,7 +77,7 @@ session_start();
                     }
                 ?>
             </span>
-            <br><br>
+            <br>
 
             <label for="mobile"> <strong>Mobile</strong></label><br>
             <input type="text" id="mobile" value="<?php echo($mobile)?>" name="mobile" autocomplete="off" class="form_input" >
@@ -89,7 +89,7 @@ session_start();
                     }
                 ?>
             </span>
-            <br><br>
+            <br>
 
             <label for="address"> <strong>Address</strong></label><br>
             <input type="text" id="address" value="<?php echo($address)?>" name="address"  autocomplete="off" class="form_input">
@@ -101,7 +101,7 @@ session_start();
                     }
                 ?>
             </span>
-            <br><br>
+            <br>
 
             <label for="password"><strong>Password</strong></label><br>
             <input type="text" id="password" value="<?php echo($password)?>" name="password" autocomplete="off" class="form_input" >
@@ -113,7 +113,7 @@ session_start();
                     }
                 ?>
             </span>
-            <br><br>
+            <br>
             
             <button type="Submit" name="action" value="delete">Delete Account</button>
             <button type="Submit" name="action" value="change">Save Changes</button>

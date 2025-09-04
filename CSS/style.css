@@ -17,8 +17,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
+    -moz-appearance: textfield; 
+    -webkit-appearance: none; 
+    appearance: none; 
 }
+
 
 
  img {
@@ -103,7 +106,7 @@ header nav a {
 }
 
 main, form, .content {
-    margin-top: 30px;  /* gap from header to main comtent */
+    margin-top: 30px;
 }
 
 a{

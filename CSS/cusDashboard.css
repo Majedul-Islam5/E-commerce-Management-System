@@ -113,6 +113,7 @@ header nav a {
     font-family: 'Segoe UI', sans-serif;
     text-decoration: none;
     color: white;
+    margin: auto;
 }
 
 a{
@@ -127,16 +128,18 @@ a{
     gap: 8px;
 }
 
-.search-form input {
-    padding: 8px 14px;
-    border-radius: 25px;   
-    border: 1px solid transparent; 
+.search-form select {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid transparent;
     outline: none;
     font-size: 14px;
-    transition: all 0.3s ease; 
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.search-form input:focus {
+.search-form select:focus {
     border: 1px solid #007bff; 
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }

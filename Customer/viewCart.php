@@ -55,9 +55,10 @@
         <hr>
 
         
-        <div style="display: <?php echo($visi1)?>;">
-            <h1>No data to show</h1>
+        <div class="no-data" style="display: <?php echo($visi1)?>;">
+            <h1>No Data to Show</h1>
         </div>
+
 
 
 
@@ -99,19 +100,25 @@
             </table>
             <select id="paymentMethod" onchange="showPaymentOptions()">
                 <option value="" disabled selected>Select Payment Method</option>
-                <option value="online">Online</option>
+                <option value="online">Mobile Banking</option>
                 <option value="card">Card</option>
             </select>
 
             <div id="onlineOptions" class="hidden">
                 <p>Select one:</p>
-                <img src="bkash.png" alt="bKash">
-                <img src="nagad.png" alt="Nagad">
+                <label class="payment-option">
+                    <input type="radio" name="onlinePayment" value="bkash" required>
+                    <img src="../Image/bkash.png" alt="bKash">
+                </label>
+                <label class="payment-option">
+                    <input type="radio" name="onlinePayment" value="nagad">
+                    <img src="../Image/nagad.png" alt="Nagad">
+                </label>
             </div>
 
             <div id="cardOptions" class="hidden">
                 <p>Enter Card/Account Number:</p>
-                <input type="text" placeholder="Enter account number" required>
+                <input type="text" placeholder="Enter Account Number" required>
             </div>
             
             <form action="confirmOrder.php" method="POST">
