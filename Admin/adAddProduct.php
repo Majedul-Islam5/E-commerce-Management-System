@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Profile</title>
-    <link rel="stylesheet" href="../CSS/customerInfo.css">
+    <link rel="stylesheet" href="../CSS/adAddProduct.css">
 </head>
 <body>
     <div class="main-content">
@@ -12,7 +12,7 @@
             <h2>ALIDADA</h2>
             <nav>
                 <a href="adDashboard.php">Home</a>
-                <a href="adAddProduct.php">Add Product</a>
+                <a href="customerInfo.php">Customer Information</a>
                 <a href="adProfile.php">Profile</a>
                 <a href="logout.php">Log Out</a>
             </nav>

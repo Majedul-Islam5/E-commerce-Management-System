@@ -17,6 +17,7 @@
             
             <a href="adDashboard.php">Home</a>
             <a href="customerInfo.php">Customer Information</a>
+            <a href="adAddProduct.php">Add Product</a>
             <a href="adProfile.php">Profile</a>
         </nav>
 

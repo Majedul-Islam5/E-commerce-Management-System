@@ -44,6 +44,7 @@ session_start();
             <nav>
                 <a href="adDashboard.php">Home</a>
                 <a href="customerInfo.php">Customer Information</a>
+                <a href="adAddProduct.php">Add Product</a>
                 <a href="logout.php">Log Out</a>
             </nav>
         </header>
