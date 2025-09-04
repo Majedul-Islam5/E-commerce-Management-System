@@ -11,7 +11,7 @@ if(!isset($_SESSION['userId']))
 
 $userId=$_SESSION['userId'];
 
-if(isset($_POST['action']) && $_POST['action']=="Change")
+if(isset($_POST['action']) && $_POST['action']=="change")
 {
 
     function test_input($data) 
@@ -149,7 +149,7 @@ if(isset($_POST['action']) && $_POST['action']=="Change")
 
 }
 
-if(isset($_POST['action']) && $_POST['action']=="Delete")
+if(isset($_POST['action']) && $_POST['action']=="delete")
 {
     
 

@@ -115,8 +115,8 @@ session_start();
             </span>
             <br>
             
-            <button type="Submit" name="action" value="Delete">Delete Account</button>
-            <button type="Submit" name="action" value="Change">Save Changes</button>
+            <button type="Submit" name="action" value="delete">Delete Account</button>
+            <button type="Submit" name="action" value="change">Save Changes</button>
             
         
         </form>
