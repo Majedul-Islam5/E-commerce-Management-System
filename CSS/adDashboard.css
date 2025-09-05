@@ -58,6 +58,76 @@ h2 {
 }
 
 
+div#view{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 25px;      
+    margin-left:70px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+div.product{
+    display: inline-block;
+    width: 160px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; 
+}
+
+div.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+.product a {
+    display: block;         
+    width: fit-content;
+    margin: 10px auto;      
+}
+
+
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.5s ease;   
+    cursor: pointer;            
+}
+
+.product img:hover {
+    transform: scale(1.08);     
+}
+
+.button {
+    padding: 0.5em 1.5em;          
+    background-color: #9ff3f3;
+    color: #121212;                
+    border: none;
+    border-radius: 1em;            
+    font-size: 0.9em;               
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #30e3f3;     
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
 footer{
     margin-right: 30px;
     text-align: center;

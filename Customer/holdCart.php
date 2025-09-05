@@ -9,7 +9,7 @@
         $userId=$_SESSION['userId'];
 
         $result=$conn->query("select * from customer_order where user_id='$userId' AND p_id=$p_id"); 
-        $row=$result->fetch_all(MYSQLI_ASSOC);
+        $result=$result->fetch_all(MYSQLI_ASSOC);
         if(count($row)>0)
         {
             header("Location: cusDashboard.php");
