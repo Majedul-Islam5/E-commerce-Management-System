@@ -1,3 +1,21 @@
+<?php
+    session_start();
+
+    include_once ('../Database/data.php');
+
+    if(!isset($_SESSION['userId'])) 
+    {
+        header("Location: ../Login.php");
+        exit();
+    }
+
+
+    $result=$conn->query("select * from user_info where type in ('Customer', 'DeliveryMan')"); 
+    $result=$result->fetch_all(MYSQLI_ASSOC);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +37,41 @@
         </header>
 
         <hr>
+
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>User Type</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Number</th>
+                <th></th>
+            </tr>
+            <?php
+                foreach($result as $row):
+                    
+                    $user_name=$row['user_name'];
+                    $type=$row['type'];
+                    $address=$row['address'];
+                    $email=$row['email'];
+                    $nid=$row['nid'];
+            ?>
+            <tr>
+                <td><?php echo($user_name)?></td>
+                <td><?php echo($type)?></td>
+                <td><?php echo($address)?></td>
+                <td><?php echo($email)?></td>
+                <td><?php echo($nid)?></td>
+                <td>
+                    <a href="manageUser.php?user_id=<?php echo $row['user_id']?>">
+                        <button type="button" class="button" id="<?php echo $row['user_id']?>">Delete User</button>
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach;?>
+        </table>
+
+
 
 
         <footer>
