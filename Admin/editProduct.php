@@ -2,6 +2,11 @@
     session_start();
 
     include_once ('../Database/data.php');
+    if(!isset($_SESSION['userId'])) 
+    {
+        header("Location: ../Login.php");
+        exit();
+    }
 
     if (isset($_GET['p_id']))
     {

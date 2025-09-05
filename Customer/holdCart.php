@@ -10,7 +10,7 @@
 
         $result=$conn->query("select * from customer_order where user_id='$userId' AND p_id=$p_id"); 
         $result=$result->fetch_all(MYSQLI_ASSOC);
-        if(count($row)>0)
+        if(count($result)>0)
         {
             header("Location: cusDashboard.php");
         }
