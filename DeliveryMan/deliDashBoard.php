@@ -1,3 +1,36 @@
+<?php
+    session_start();
+
+    include_once ('../Database/data.php');
+
+    if(!isset($_SESSION['userId'])) 
+    {
+        header("Location: ../Login.php");
+        exit();
+    }
+
+    $visi1="";
+    $visi2="";
+
+
+    $result=$conn->query("select * from order_info where d_id is NULL"); 
+    $result=$result->fetch_all(MYSQLI_ASSOC);
+    if(count($result)==0)
+    {
+        $visi1="block";
+        $visi2="none";
+    }
+    else
+    {
+        $cusresult=$conn->query("select order_info.order_id, user_info.user_name, user_info.address, user_info.nid from user_info INNER JOIN order_info on user_info.user_id=order_info.c_id where order_info.d_id is NULL"); 
+        $cusresult=$cusresult->fetch_all(MYSQLI_ASSOC);
+                
+        $visi1="none";
+        $visi2="block";
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +56,48 @@
 
    
     </header>
+
+
+    <div class="no-data" style="display: <?php echo($visi1)?>;">
+        <h1>No Customers order till now to accept</h1>
+    </div>
+
+    <div style="display: <?php echo($visi2)?>;" class="product">
+
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>Address</th>
+                <th>Number</th>
+                <th></th>
+
+
+                
+            </tr>
+                <?php
+
+                foreach($cusresult  as $row):
+                    $order_id=$row['order_id'];
+                    $user_name=$row['user_name'];
+                    $address=$row['address'];
+                    $nid=$row['nid'];
+                
+                ?>
+                <tr>
+                    <td><?php echo($user_name)?></td>
+                    <td><?php echo($address)?></td>
+                    <td><?php echo($nid)?></td>
+                    <td>
+                        <a href="acceptOrder.php?order_id=<?php echo ($order_id)?>">
+                            <button type="button" class="button" id="<?php echo ($order_id)?>"> Accept Order</button>
+                        </a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+                
+        </table>
+
+    </div>
 
 
     <footer>

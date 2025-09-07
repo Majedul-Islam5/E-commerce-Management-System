@@ -62,7 +62,7 @@
 
 
 
-        <div style="display: <?php echo($visi2)?>;" clas=product>
+        <div style="display: <?php echo($visi2)?>;" class="product">
             <table>
                 <?php
 

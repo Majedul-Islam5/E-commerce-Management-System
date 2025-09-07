@@ -68,7 +68,7 @@
 
             if($row[0]['type']=="DeliveryMan")
             {
-                header("Location: DeliveryMan/deliDashboard.php");
+                header("Location: DeliveryMan/deliDashBoard.php");
                 exit();
             }
             
