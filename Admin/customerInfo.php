@@ -45,7 +45,7 @@
                 <th>Address</th>
                 <th>Email</th>
                 <th>Number</th>
-                <th></th>
+                <th>Delete User??</th>
             </tr>
             <?php
                 foreach($result as $row):
@@ -57,17 +57,18 @@
                     $nid=$row['nid'];
             ?>
             <tr>
-                <td><?php echo($user_name)?></td>
-                <td><?php echo($type)?></td>
-                <td><?php echo($address)?></td>
-                <td><?php echo($email)?></td>
-                <td><?php echo($nid)?></td>
-                <td>
+                <td data-label="User Name"><?php echo($user_name)?></td>
+                <td data-label="User Type"><?php echo($type)?></td>
+                <td data-label="Address"><?php echo($address)?></td>
+                <td data-label="Email"><?php echo($email)?></td>
+                <td data-label="Number"><?php echo($nid)?></td>
+                <td data-label="Action">
                     <a href="manageUser.php?user_id=<?php echo $row['user_id']?>">
                         <button type="button" class="button" id="<?php echo $row['user_id']?>">Delete User</button>
                     </a>
                 </td>
             </tr>
+
             <?php endforeach;?>
         </table>
 

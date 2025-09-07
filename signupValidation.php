@@ -47,7 +47,7 @@ if(empty($email))
 
 else
 {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
         $_SESSION['Email'] = "Enter a valid email address";
         $errors = "empty";
@@ -64,11 +64,17 @@ if(empty($mobile))
 
 else
 {
-    if(strlen($mobile) != 11) 
-    {
-        $_SESSION['Mobile'] = "Mobile number must contain 11 digits";
-        $errors = "empty";
-    }
+    if(strlen($mobile) != 11)
+        {
+            $_SESSION['Mobile'] = "Mobile number must contain 11 digits";
+            $errors = "empty";
+        }
+        
+    elseif(!preg_match("/^(013|014|015|016|017|018|019)/", $mobile))
+        {
+            $_SESSION['Mobile'] = "Mobile number must be valid";
+            $errors = "empty";
+        }
 }
 
 if(empty($address)) 
@@ -122,7 +128,7 @@ if(empty($userType))
 }
 
 
-if (!empty($errors)) 
+if(!empty($errors)) 
 {
     //$_SESSION['signup_error'] = $error;
     header("Location: index.php");
