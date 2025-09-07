@@ -65,7 +65,7 @@ session_start();
                     }
                 ?>
             </span>
-            <br><br>
+            <br>
 
             <label for="email"> <strong>Email</strong></label><br>
             <input type="email" id="email" value="<?php echo($email)?>" name="email" autocomplete="off" class="form_input" >

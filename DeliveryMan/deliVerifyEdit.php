@@ -151,13 +151,8 @@ if(isset($_POST['action']) && $_POST['action']=="change")
 
 if(isset($_POST['action']) && $_POST['action']=="delete")
 {
-    
 
-    $stmt=$conn->prepare("DELETE FROM customer_order WHERE user_id=?");
-    $stmt->bind_param("i", $userId);
-    $stmt->execute();
-
-    $stmt=$conn->prepare("DELETE FROM order_info WHERE c_id=?");
+    $stmt=$conn->prepare("DELETE FROM order_info WHERE d_id=?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
 
