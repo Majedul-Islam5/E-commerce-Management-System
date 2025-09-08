@@ -79,6 +79,12 @@ div.product{
     transition: all 0.3s ease; 
 }
 
+.stockout {
+    color: red;
+    font-weight: bold;
+}
+
+
 div.product:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15); 

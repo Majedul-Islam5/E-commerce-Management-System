@@ -35,11 +35,6 @@
     }
     else
     {
-        if(!preg_match("/^(?=(?:.*[a-zA-Z]){4,})[a-zA-Z ]+$/", $p_name)) 
-        {
-            $_SESSION['p_name']="Product name can contain only letters";
-            $errors="empty";
-        }
         if(strlen($p_name)<4) 
         {
             $_SESSION['p_name']="Product name must be atleast 4 letters";
