@@ -63,7 +63,7 @@
             <div class="container file-container">
                 <input type="file" id="product" name="product" class="form_input file-input">
                 <label for="product">Product Image</label>
-                <span class="error">
+                <span class="error2">
                     <?php
                     if (isset($_SESSION['product'])) {
                         echo $_SESSION['product'];

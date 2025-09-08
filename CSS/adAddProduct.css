@@ -112,8 +112,17 @@ label {
 
 .error {
     position: absolute;
-    bottom: -1.2em;
-    left: 0.2em;
+    top: 3.8em;
+    left: 0.5em;
+    font-size: 0.75em;
+    color: red;
+}
+
+
+.error2 {
+    position: absolute;
+    top: 5.8em;
+    left: 0.5em;
     font-size: 0.75em;
     color: red;
 }
