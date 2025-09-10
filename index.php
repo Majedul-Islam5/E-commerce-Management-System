@@ -165,6 +165,6 @@
         <hr>
         <p>Copyright &copy; All rights reserved by ALIDADA</p>
     </footer>
-    <!--<script src="JS/signupValidation.js"></script>-->
+    <script src="JS/signupValidation.js"></script>
 </body>
 </html>
