@@ -91,8 +91,8 @@
                     <td><?php echo($user_name)?></td>
                     <td><?php echo($address)?></td>
                     <td><?php echo($nid)?></td>
-                    <td><?php echo($product_cost)?></td>
-                    <td><?php echo($delivery_fee)?></td>
+                    <td>BDT <?php echo($product_cost)?></td>
+                    <td>BDT <?php echo($delivery_fee)?></td>
                     <td>
                         <a href="acceptOrder.php?order_id=<?php echo ($order_id)?>">
                             <button type="button" class="button" id="<?php echo ($order_id)?>"> Accept Order</button>

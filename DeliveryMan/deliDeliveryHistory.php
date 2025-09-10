@@ -15,6 +15,7 @@
     $visi1="";
     $visi2="";
 
+    $total=0;
 
     $result=$conn->query("select * from order_info where d_id='$userId' and status='delivered'"); 
     $result=$result->fetch_all(MYSQLI_ASSOC);
@@ -26,7 +27,7 @@
 
     else
     {
-        $cusresult=$conn->query("select order_info.order_id, user_info.user_name, user_info.address, user_info.nid from user_info INNER JOIN order_info on user_info.user_id=order_info.c_id where order_info.d_id='$userId' and status='delivered'"); 
+        $cusresult=$conn->query("select order_info.order_id, order_info.delivery_fee, user_info.user_name, user_info.address, user_info.nid from user_info INNER JOIN order_info on user_info.user_id=order_info.c_id where order_info.d_id='$userId' and status='delivered'"); 
         $cusresult=$cusresult->fetch_all(MYSQLI_ASSOC);
                 
         $visi1="none";
@@ -68,7 +69,7 @@
             <tr>
                 <th>User Name</th>
                 <th>Address</th>
-                <th>Payment</th>
+                <th>Delivery Fee</th>
             
             </tr>
                 <?php
@@ -77,19 +78,19 @@
                     $order_id=$row['order_id'];
                     $user_name=$row['user_name'];
                     $address=$row['address'];
-                    $nid=$row['nid'];
-                
+                    $delivery_fee=$row['delivery_fee'];
+                    $total+=$delivery_fee;                
                 ?>
                 <tr>
                     <td><?php echo($user_name)?></td>
                     <td><?php echo($address)?></td>
-                    <td>10k</td>
+                    <td>BDT <?php echo($delivery_fee)?></td>
                 </tr>
             <?php endforeach;?>
             <tr>
                 <td></td>
                 <td>Total earnings</td>
-                <td>1000k</td>
+                <td>BDT <?php echo($total)?></td>
             </tr>
                 
         </table>
