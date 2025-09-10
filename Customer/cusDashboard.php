@@ -56,7 +56,7 @@
         <nav>
             
             <a href="cusDashboard.php">Home</a>
-            <a href="viewCart.php">Add To Cart</a>
+            <a href="viewCart.php">View Cart</a>
             <a href="cusProfile.php">Profile</a>
             <form class="search-form" action="cusDashboard.php" method="POST">
                 <select name="category" onchange="this.form.submit()">

@@ -22,7 +22,7 @@
     }
     else
     {
-        $cusresult=$conn->query("select order_info.order_id, user_info.user_name, user_info.address, user_info.nid from user_info INNER JOIN order_info on user_info.user_id=order_info.c_id where order_info.d_id is NULL"); 
+        $cusresult=$conn->query("select order_info.order_id, order_info.product_cost, order_info.delivery_fee, user_info.user_name, user_info.address, user_info.nid from user_info INNER JOIN order_info on user_info.user_id=order_info.c_id where order_info.d_id is NULL"); 
         $cusresult=$cusresult->fetch_all(MYSQLI_ASSOC);
                 
         $visi1="none";
@@ -69,6 +69,8 @@
                 <th>User Name</th>
                 <th>Address</th>
                 <th>Number</th>
+                <th>Product Cost</th>
+                <th>Delivery Fee</th>
                 <th></th>
 
 
@@ -81,12 +83,16 @@
                     $user_name=$row['user_name'];
                     $address=$row['address'];
                     $nid=$row['nid'];
+                    $product_cost=$row['product_cost'];
+                    $delivery_fee=$row['delivery_fee'];
                 
                 ?>
                 <tr>
                     <td><?php echo($user_name)?></td>
                     <td><?php echo($address)?></td>
                     <td><?php echo($nid)?></td>
+                    <td><?php echo($product_cost)?></td>
+                    <td><?php echo($delivery_fee)?></td>
                     <td>
                         <a href="acceptOrder.php?order_id=<?php echo ($order_id)?>">
                             <button type="button" class="button" id="<?php echo ($order_id)?>"> Accept Order</button>
