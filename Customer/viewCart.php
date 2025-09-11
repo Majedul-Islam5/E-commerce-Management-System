@@ -128,16 +128,16 @@
                     <input type="text" name="cardPayment" placeholder="Enter Account Number">
                 </div>
                 <br>
-                <span id="null">
-                        <?php
+                <span id="errorMessage">
+                    <?php
                     if (isset($_SESSION['pay'])) 
-                    {
-                        echo $_SESSION['pay'];
-
-                        unset($_SESSION['pay']);
-                    }
-                ?>
+                        {
+                            echo $_SESSION['pay'];
+                            unset($_SESSION['pay']);
+                        }
+                        ?>
                 </span>
+
                 
                 <input type="hidden" name="total" value="<?php echo $total; ?>">
                 <input type="hidden" name="delivary" value="<?php echo $delivary; ?>">
