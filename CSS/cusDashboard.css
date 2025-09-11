@@ -125,28 +125,36 @@ div.product:hover {
     display: flex;
     align-items: center;
     gap: 8px;
+    background-color: #111;
+    padding: 8px 16px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 400px;       
+    margin: 10px;     
 }
 
 .search-form select {
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid transparent;
     outline: none;
     font-size: 14px;
-    background-color: white;
+    background-color: #222;
+    color: white;
     cursor: pointer;
+    flex: 1;                
     transition: all 0.3s ease;
 }
 
 .search-form select:focus {
-    border: 1px solid #007bff; 
+    border: 1px solid #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .search-form button {
     padding: 8px 16px;
-    background-color: white;
-    color: black;
+    background-color: #333;
+    color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -155,9 +163,10 @@ div.product:hover {
 }
 
 .search-form button:hover {
-    background-color: gray;
+    background-color: #555;
     color: white;
 }
+
 
 footer{
     margin-right: 30px;

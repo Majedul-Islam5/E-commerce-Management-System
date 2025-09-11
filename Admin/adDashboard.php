@@ -66,7 +66,7 @@
         <?php endforeach;?>       
     </div>
 
-
+    <br><br><br>
     <footer>
         
         <hr>

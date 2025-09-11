@@ -58,7 +58,16 @@
             <a href="cusDashboard.php">Home</a>
             <a href="viewCart.php">View Cart</a>
             <a href="cusProfile.php">Profile</a>
-            <form class="search-form" action="cusDashboard.php" method="POST">
+            <a href="../Login.php">Logout</a>
+            
+        </nav>
+
+   
+    </header>
+
+    <hr>
+
+    <form class="search-form" action="cusDashboard.php" method="POST">
                 <select name="category" onchange="this.form.submit()">
                     <option value="" disabled selected>Choose a Product Type</option>
                     <?php
@@ -78,12 +87,6 @@
                 </select>
                 <button type="submit" name="reset">Reset</button>
             </form>
-        </nav>
-
-   
-    </header>
-
-    <hr>
 
     <div id="view">
         
@@ -101,9 +104,8 @@
         </div>
         <?php endforeach;?>       
     </div>
-    
 
-
+    <br><br><br>
     <footer>
         
         <hr>
