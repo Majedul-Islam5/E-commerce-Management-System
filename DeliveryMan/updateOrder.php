@@ -11,26 +11,43 @@
 
     $errors="";
 
-    if (!isset($_FILES['product']) ||  $_FILES['product']['error'] !== UPLOAD_ERR_OK) 
+    if(isset($_POST['accept']))
     {
-    
-        $_SESSION['product'] = "Please upload a image to confirm delivery.";
-        $errors="empty";
-    }
+        if (!isset($_FILES['product']) ||  $_FILES['product']['error'] !== UPLOAD_ERR_OK) 
+        {
+        
+            $_SESSION['product'] = "Please upload a image to confirm delivery.";
+            $errors="empty";
+        }
 
-    if (!empty($errors)) 
-    {
-        header("Location: deliDeliveryStatus.php");
-        exit();
+        if (!empty($errors)) 
+        {
+            header("Location: deliDeliveryStatus.php");
+            exit();
+        }
+        else
+        {
+            $order_id=$_POST['accept'];
+            $status="delivered";
+            $stmt=$conn->prepare("update order_info set status=? WHERE order_id=?");
+            $stmt->bind_param("si", $status, $order_id);
+            $stmt->execute();
+
+            header("Location: deliDashBoard.php");
+            exit();
+        }
     }
-    else
+    if(isset($_POST['cancel']))
     {
-        $order_id=$_POST['button'];
-        $status="delivered";
-        $stmt=$conn->prepare("update order_info set status=? WHERE order_id=?");
+        $order_id=$_POST['cancel'];
+        $status="ordered";
+        $stmt=$conn->prepare("update order_info set status=?,d_id=NULL WHERE order_id=?");
         $stmt->bind_param("si", $status, $order_id);
         $stmt->execute();
 
-        header("Location: deliDashBoard.php");
+        header("Location: deliDeliveryStatus.php");
+        exit();
     }
+
+    
 ?>

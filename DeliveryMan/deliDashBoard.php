@@ -71,7 +71,7 @@
                 <th>Number</th>
                 <th>Product Cost</th>
                 <th>Delivery Fee</th>
-                <th></th>
+                <th style="border:none; background:none;"></th>
 
 
                 
@@ -93,7 +93,7 @@
                     <td><?php echo($nid)?></td>
                     <td>BDT <?php echo($product_cost)?></td>
                     <td>BDT <?php echo($delivery_fee)?></td>
-                    <td>
+                    <td style="border:none; ">
                         <a href="acceptOrder.php?order_id=<?php echo ($order_id)?>">
                             <button type="button" class="button" id="<?php echo ($order_id)?>"> Accept Order</button>
                         </a>

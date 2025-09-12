@@ -69,7 +69,7 @@
                     <th>Address</th>
                     <th>Upload Picture</th>
                     <th>Number</th>
-                    <th></th>  
+                    <th style="border:none; background:none;"></th>  
                 </tr>
                     <?php
                     foreach($cusresult  as $row):
@@ -96,8 +96,9 @@
                                 </div>
                             </td>
                             <td><?php echo($nid)?></td>
-                            <td>
-                                <button type="submit" class="button" name="button" value="<?php echo ($order_id)?>"> Delivered</button>
+                            <td style="border:none;">
+                                <button type="submit" class="button" name="accept" value="<?php echo ($order_id)?>"> Delivered</button>
+                                <button type="submit" class="button" name="cancel" value="<?php echo ($order_id)?>" style="background-color: red; margin-left:12px;"> Cancel</button>
                                 
                             </td>
                         </form>
