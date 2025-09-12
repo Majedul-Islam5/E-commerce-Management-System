@@ -50,14 +50,14 @@
 <body>
     <div class="main-content">
     <header>
-        <h2>ALIDADA</h2>
+        <a href="cusDashboard.php"><h2>ALIDADA</h2></a>
 
         
         <nav>
             
-            <a href="cusDashboard.php">Home</a>
             <a href="viewCart.php">View Cart</a>
             <a href="cusProfile.php">Profile</a>
+            <a href="history.php">Order History</a>
             <a href="../Login.php">Logout</a>
             
         </nav>

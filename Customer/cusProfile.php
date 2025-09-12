@@ -40,10 +40,10 @@ session_start();
 <body>
     <div class="main-content">
         <header>
-            <h2>ALIDADA</h2>
+            <a href="cusDashboard.php"><h2>ALIDADA</h2></a>
             <nav>
-                <a href="cusDashboard.php">Home</a>
-                <a href="viewCart.php">Add to Cart</a>
+                <a href="viewCart.php">View Cart</a>
+                <a href="history.php">Order History</a>
                 <a href="logout.php">Log Out</a>
             </nav>
         </header>
