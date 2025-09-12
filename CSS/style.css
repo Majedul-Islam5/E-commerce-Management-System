@@ -2,6 +2,7 @@ body{
     background-color: white;
 }
 
+
 span{
     position: absolute;
     top: 3em; 
@@ -89,7 +90,7 @@ header {
     background-color: black;    
     width: 100%;               
     height: 50px;               
-    box-sizing: border-box;      /* includes padding in width */
+    box-sizing: border-box;    
 }
 
 header h2 {
@@ -189,4 +190,27 @@ footer{
         text-align: center;
         color: white;
     }
+}
+
+
+form {
+    padding-bottom: 50px; 
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    margin: 0;
 }

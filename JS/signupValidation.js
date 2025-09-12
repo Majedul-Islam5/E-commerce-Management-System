@@ -10,6 +10,9 @@ function validation()
 
     const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    const license = document.getElementById('license').value.trim();
+    const vehicleType = document.getElementById('vehicleType').value;
+
     if(firstname=="")
     {
         console.log("Validation function called");
@@ -39,6 +42,26 @@ function validation()
         document.getElementById("typeerr").innerHTML="Please select a user type";
         return false;
     }
+
+    if (userType=="DeliveryMan") {
+        const licenseRegex=/^[A-Z]{1,3}-[0-9]{1,4}-[0-9]{1,4}$/i;
+        if (license=="") 
+        {
+            document.getElementById("licenseerr").innerHTML="Please enter license number";
+            return false;
+        }
+        if (!licenseRegex.test(license)) 
+        {
+            document.getElementById("licenseerr").innerHTML="Enter a valid license number";
+            return false;
+        }
+        if (vehicleType=="") 
+        {
+            document.getElementById("vehicleTypeErr").innerHTML="Please select a vehicle type";
+            return false;
+        }
+    }
+
 
     if(mobile=="")
     {
@@ -133,4 +156,13 @@ document.getElementById('address').addEventListener("keypress", function(e)
 document.getElementById('password').addEventListener("keypress", function(e) 
 {
     document.getElementById("passworderr").innerHTML="";
+});
+
+document.getElementById('userType').addEventListener('change', function() {
+    const vehicleDiv = document.getElementById('vehicleDiv');
+    if (this.value === 'DeliveryMan') {
+        vehicleDiv.style.display = 'block';
+    } else {
+        vehicleDiv.style.display = 'none';
+    }
 });

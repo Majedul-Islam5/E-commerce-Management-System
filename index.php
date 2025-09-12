@@ -1,10 +1,5 @@
 <?php
     session_start();
-    /*if (isset($_SESSION['signup_error'])) 
-    {
-        echo "<p style='color: red;'>Empty Field exist</p>";
-        unset($_SESSION['signup_error']);
-    }*/
 ?>
 
 
@@ -146,6 +141,44 @@
                     }
                 ?>
             </span>
+        </div>
+
+        <div id="vehicleDiv" style="display:none;">
+            <div class="container">
+                <input type="text" id="license" name="license" autocomplete="off" placeholder=" " class="form_input" >
+                <label for="license"><strong>Vehicle Type</strong></label>
+                <span id="licenseerr"></span>
+
+                <span id="lierr">
+                    <?php
+                        if (isset($_SESSION['License'])) {
+                            echo $_SESSION['License'];
+                            unset($_SESSION['License']);
+                        }
+                    ?>
+                </span>
+            </div>
+
+            <div class="container">
+                <select id="vehicleType" name="vehicleType" class="form_input" style="width:338px; height: 45px;">
+                    <option value="" disabled selected>Select Vehicle Type</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Van">Van</option>
+                </select>
+                <label for="vehicleType"><strong>Vehicle Type</strong></label>
+                <span id="vehicleTypeErr"></span>
+
+                <span id="vehicletypeerr">
+                    <?php
+                        if (isset($_SESSION['VehicleType'])) {
+                            echo $_SESSION['VehicleType'];
+                            unset($_SESSION['VehicleType']);
+                        }
+                    ?>
+                </span>
+            </div>
+
+
         </div>
 
         <div class="form-group">

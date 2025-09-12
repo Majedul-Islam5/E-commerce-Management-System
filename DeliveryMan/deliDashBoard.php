@@ -43,15 +43,15 @@
 <body>
     <div class="main-content">
     <header>
-        <h2>ALIDADA</h2>
+        <a href="deliDashboard.php"><h2>ALIDADA</h2></a>
 
         
         <nav>
-            
-            <a href="deliDashboard.php">Home</a>
+     
             <a href="deliDeliveryHistory.php">Delivery History</a>
             <a href="deliDeliveryStatus.php">Delivery Status</a>
             <a href="deliProfile.php">Profile</a>
+            <a href="logout.php">Log Out</a>
         </nav>
 
    
