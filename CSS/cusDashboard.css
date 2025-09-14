@@ -39,14 +39,23 @@ header nav {
     gap: 20px;
 }
 
-header nav a {
+header nav a
+{
     font-family: 'Segoe UI', sans-serif;
     text-decoration: none;
     color: white;
     margin: auto;
 }
 
-a{
+header a
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+a
+{
     margin-right: 50px;
     font-family: 'Segoe UI';
 }

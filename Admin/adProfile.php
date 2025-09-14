@@ -40,7 +40,7 @@ session_start();
 <body>
     <div class="main-content">
         <header>
-            <h2>ALIDADA</h2>
+            <a href="adDashboard.php"><h2>ALIDADA</h2></a>
             <nav>
                 <a href="adDashboard.php">Home</a>
                 <a href="customerInfo.php">Customer Information</a>

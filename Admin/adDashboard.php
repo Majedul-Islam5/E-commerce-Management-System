@@ -28,15 +28,15 @@
 <body>
     <div class="main-content">
     <header>
-        <h2>ALIDADA</h2>
+        <a href="adDashboard.php"><h2>ALIDADA</h2></a>
 
         
         <nav>
             
-            <a href="adDashboard.php">Home</a>
             <a href="customerInfo.php">Customer Information</a>
             <a href="adAddProduct.php">Add Product</a>
             <a href="adProfile.php">Profile</a>
+            <a href="logout.php">Log Out</a>
         </nav>
 
    

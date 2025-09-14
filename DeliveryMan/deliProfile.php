@@ -40,7 +40,7 @@ session_start();
 <body>
     <div class="main-content">
         <header>
-            <h2>ALIDADA</h2>
+            <a href="deliDashboard.php"><h2>ALIDADA</h2></a>
             <nav>
                 <a href="deliDashboard.php">Home</a>
                 <a href="deliDeliveryHistory.php">Delivery History</a>

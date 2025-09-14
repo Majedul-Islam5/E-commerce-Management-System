@@ -47,6 +47,7 @@
         <header>
             <a href="cusDashboard.php"><h2>ALIDADA</h2></a>
             <nav>
+                <a href="cusDashboard.php">Home</a>
                 <a href="cusProfile.php">Profile</a>
                 <a href="history.php">Order History</a>
                 <a href="logout.php">Log Out</a>
@@ -110,6 +111,15 @@
                     <option value="online">Mobile Banking</option>
                     <option value="card">Card</option>
                 </select>
+                <span id="errorMessage">
+                    <?php
+                    if (isset($_SESSION['pay'])) 
+                        {
+                            echo $_SESSION['pay'];
+                            unset($_SESSION['pay']);
+                        }
+                        ?>
+                </span>
 
                 <div id="onlineOptions" class="hidden">
                     <p>Select one:</p>
@@ -128,15 +138,7 @@
                     <input type="text" name="cardPayment" placeholder="Enter Account Number">
                 </div>
                 <br>
-                <span id="errorMessage">
-                    <?php
-                    if (isset($_SESSION['pay'])) 
-                        {
-                            echo $_SESSION['pay'];
-                            unset($_SESSION['pay']);
-                        }
-                        ?>
-                </span>
+                
 
                 
                 <input type="hidden" name="total" value="<?php echo $total; ?>">

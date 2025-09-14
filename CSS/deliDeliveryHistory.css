@@ -46,6 +46,12 @@ header nav a {
     color: white;
 }
 
+header a
+{
+    text-decoration: none;
+    color: white;
+}
+
 a{
     margin-right: 50px;
     font-family: 'Segoe UI';
