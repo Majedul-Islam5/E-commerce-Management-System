@@ -17,7 +17,7 @@
     <h2>ALIDADA</h2>
     <nav>
         <a href="index.php">Home</a>
-        <a href="../html/Education.html">Contact</a>
+        <a href="contact.php">Contact</a>
         <a href="../html/Experience.html">About</a>
         <a href="Login.php">Log In</a>
     </nav>
