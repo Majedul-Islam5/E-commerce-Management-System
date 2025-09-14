@@ -58,7 +58,7 @@
             <a href="viewCart.php">View Cart</a>
             <a href="cusProfile.php">Profile</a>
             <a href="history.php">Order History</a>
-            <a href="../Login.php">Logout</a>
+            <a href="logout.php">Logout</a>
             
         </nav>
 
