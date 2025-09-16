@@ -1,8 +1,10 @@
-body {
+body
+{
     background-color: #e3e6e6 !important;
 }
 
-html, body {
+html, body
+{
     margin: 0;
     padding: 0;
 }
@@ -14,7 +16,8 @@ hr{
     background-color: gray; 
 }
 
-.main-content {
+.main-content
+{
     flex: 1;
 }
 
@@ -30,17 +33,20 @@ header {
     box-sizing: border-box;      
 }
 
-header h2 {
+header h2
+{
     margin: 0;
     color: white;                
 }
 
-header nav {
+header nav
+{
     display: flex;              
     gap: 20px;
 }
 
-header nav a {
+header nav a
+{
     font-family: 'Segoe UI', sans-serif;
     text-decoration: none;
     color: white;
@@ -52,32 +58,37 @@ header a
     color: white;
 }
 
-a{
+a
+{
     margin-right: 50px;
     font-family: 'Segoe UI';
 }
 
-h2 {
+h2
+{
     margin: 15px 0 10px 70px;
     font-size: 1.6em;
     color: #121212;
 }
 
-form {
+form
+{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 70px;
 }
 
-.container {
+.container
+{
     width: 20em;           
     height: 2.5em;
     position: relative;
     margin-bottom: 35px;
 }
 
-.form_input {
+.form_input
+{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -89,15 +100,18 @@ form {
     font-size: 1em;
 }
 
-.form_input:hover {
+.form_input:hover
+{
     border: 2px solid rgba(0, 255, 255, 0.5);
 }
 
-.form_input:focus {
+.form_input:focus
+{
     border: 2px solid #00ffff;
 }
 
-label {
+label
+{
     position: absolute;
     background: white;
     color: black;

@@ -52,7 +52,7 @@
     <nav>
         <a href="Login.php">Home</a>
         <a href="contact.php">Contact</a>
-        <a href="../html/Experience.html">About</a>
+        <a href="about.php">About</a>
         <a href="index.php">Sign Up</a>
     </nav>
 </header>
